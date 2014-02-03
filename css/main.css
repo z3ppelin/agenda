@@ -1,0 +1,80 @@
+/**
+ * Main css file for DBIntruder Agenda demo site.
+ *
+ * @author  Bogdan Constantinescu <bog_con@yahoo.com>
+ * @license The BSD 3-Clause License. See LICENSE.txt
+ */
+body {
+	font: 13px/1.231 arial,helvetica,clean,sans-serif;
+	*font-size: small; /* for IE */
+	*font: x-small; /* for IE in quirks mode */
+    background: url('../images/bkg_texture.jpg') repeat;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 800px;
+    margin: auto;
+}
+.header {
+    background: url('../images/header.png') repeat-y;
+    height: 120px;
+    padding: 20px 10px 0px 20px;
+    color: #DDD;
+}
+.header img {
+    vertical-align: middle;
+    margin-right: 10px;
+    padding: 10px 0px 10px 0;
+    width: 80px;
+    height: 80px;
+}
+.content {
+    background: url('../images/main.png') repeat-y;
+    min-height: 350px;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    padding: 10px 10px 10px 10px;
+    background-color: #CCC;
+}
+.footer {
+    height: 30px;
+    text-align: center;
+    font-size: 77%;
+    padding: 10px 0px 10px 0;
+    background: url('../images/footer.png');
+    color: #DDD;
+}
+.contacts {
+    width: 100%;
+    border: 1px #DDD solid;
+    border-collapse: collapse;
+}
+.contacts td {
+    border: 1px #DDD solid;
+    padding: 5px;
+}
+.contacts th {
+    border: 1px #DDD solid;
+    padding: 2px;
+    background-color: #CCC;
+}
+.left {
+    float: left;
+    margin-left: 10px;
+}
+.right {
+    float: right;
+    width: 600px;
+}
+.contact-details td{
+    padding: 3px;
+}
+.back_link a {
+    text-decoration: none;
+}
+.center {
+    text-align: center;
+}

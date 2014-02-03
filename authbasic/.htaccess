@@ -1,0 +1,5 @@
+#@author	Bogdan Constantinescu <bog_con@yahoo.com>
+AuthUserFile C:\xampp\htdocs\agenda\authbasic\.htpasswd
+AuthName "Tell me who you are - basic auth" 
+AuthType Basic
+require valid-user

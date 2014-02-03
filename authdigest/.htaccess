@@ -1,0 +1,5 @@
+#@author	Bogdan Constantinescu <bog_con@yahoo.com>
+AuthUserFile C:\xampp\htdocs\agenda\authdigest\.htpasswd
+AuthName "Tell me who you are - digest auth" 
+AuthType Digest
+require valid-user

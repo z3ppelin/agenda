@@ -1,0 +1,8 @@
+nbproject/*
+*.swp
+Thumbs.db
+server.crt
+server.csr
+server.key
+
+
