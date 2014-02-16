@@ -6,6 +6,7 @@
  * @license The BSD 3-Clause License. See LICENSE.txt
  */
 ?>
+<?php if (!defined('APP_INCLUDE_ME')) die; // this file cannot be accessed directly ?>
 <?php
 require_once 'header.inc.php';
 if (isset($contacts) && count($contacts)): 

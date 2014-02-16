@@ -6,6 +6,7 @@
  * @license The BSD 3-Clause License. See LICENSE.txt
  */
 ?>
+<?php if (!defined('APP_INCLUDE_ME')) die; // this file cannot be accessed directly ?>
             </div> <!-- end of content -->
             <div class="footer">
                 <p>&copy; CopyRight 2014<?php if (date('Y') != '2014'): ?> - <?php echo date('Y'); ?><?php endif; ?> <strong>Bogdan Constantinescu</strong></p>
