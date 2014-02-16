@@ -4,6 +4,6 @@ Thumbs.db
 server.crt
 server.csr
 server.key
-*.local.php
+*.local.inc.php
 
 

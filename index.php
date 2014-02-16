@@ -7,7 +7,8 @@
  */
 ?>
 <?php
-require_once 'includes/config.inc.php';
+require_once 'includes/config.global.inc.php';
+require_once 'includes/config.local.inc.php';
 require_once 'db/connect_mysql.inc.php';
 require_once 'func/get_all_contacts.inc.php';
 $contacts = getAllContacts();
