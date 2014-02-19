@@ -13,8 +13,8 @@ if (!isset($_REQUEST['phone'])) {
     exit();
 }
 
-require_once '../../includes/config.global.inc.php';
-require_once '../../includes/config.local.inc.php';
+require_once '../../../includes/config.global.inc.php';
+require_once '../../../includes/config.local.inc.php';
 
 $errOn = 1;
 $pageStable = 1;

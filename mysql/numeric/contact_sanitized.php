@@ -7,14 +7,14 @@
  */
 ?>
 <?php
-if (!isset($_REQUEST['phone'])) {
+if (!isset($_REQUEST['id'])) {
     header('HTTP/1.1 404 Not Found');
     echo '<h1>404 Not Found</h1>';
     exit();
 }
 
-require_once '../../../includes/config.global.inc.php';
-require_once '../../../includes/config.local.inc.php';
+require_once '../../includes/config.global.inc.php';
+require_once '../../includes/config.local.inc.php';
 
 $errOn = 1;
 $pageStable = 1;
@@ -33,13 +33,8 @@ if ($errOn) {
 
 require_once 'db/connect_mysql.inc.php';
 
-require_once 'func/get_contact_by_phone_doublequote.inc.php';
-$contact = getContactByPhone($_REQUEST['phone']);
-
-if (!count($contact) && !headers_sent()) {
-    header('Location: /');
-    exit();
-}
+require_once 'func/get_contact_by_id_sanitized.inc.php';
+$contact = getContactById($_REQUEST['id']);
 
 if ($pageStable) {
     require_once 'pages/single_contact_stable.inc.php';
