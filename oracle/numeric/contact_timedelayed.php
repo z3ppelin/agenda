@@ -2,21 +2,22 @@
 /**
  * Displays contact 's details.
  * This script is SQL injectable.
- * Particularity: user is redirected to another page when contact is not found.
+ * Particularity: this script delayes response with 4 sec in order to
+ * check if TimeBased SQL Injection still works.
  * 
  * @author  Bogdan Constantinescu <bog_con@yahoo.com>
  * @license The BSD 3-Clause License. See LICENSE.txt
  */
 ?>
 <?php
-if (!isset($_REQUEST['phone'])) {
+if (!isset($_REQUEST['id'])) {
     header('HTTP/1.1 404 Not Found');
     echo '<h1>404 Not Found</h1>';
     exit();
 }
 
-require_once '../../../includes/config.global.inc.php';
-require_once '../../../includes/config.local.inc.php';
+require_once '../../includes/config.global.inc.php';
+require_once '../../includes/config.local.inc.php';
 
 $errOn = 1;
 $pageStable = 1;
@@ -33,18 +34,15 @@ if ($errOn) {
     require_once 'display_errors_off.inc.php';
 }
 
-require_once 'db/connect_mysql.inc.php';
+require_once 'db/connect_oracle.inc.php';
 
-require_once 'func/get_contact_by_phone_doublequote_like.inc.php';
-$contacts = getContactByPhone($_REQUEST['phone']);
-
-if (!count($contacts) && !headers_sent()) {
-    header('Location: /');
-    exit();
-}
+require_once 'func/get_contact_by_id.inc.php';
+$contact = getContactById($_REQUEST['id']);
 
 if ($pageStable) {
-    require_once 'pages/multiple_contacts_stable.inc.php';
+    require_once 'pages/single_contact_stable.inc.php';
 } else {
-    require_once 'pages/multiple_contacts_not_stable.inc.php';
+    require_once 'pages/single_contact_not_stable.inc.php';
 }
+
+sleep(4);
