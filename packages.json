@@ -1,0 +1,32 @@
+{
+    "packages": {
+        "bogcon/agenda": {
+            "master": {
+                "name": "bogcon/agenda",
+                "version": "master",
+                "source": {
+                    "type": "vcs",
+                    "url": "https://github.com/z3ppelin/agenda.git",
+                    "reference": "master"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/z3ppelin/agenda/archive/master.zip",
+                    "reference": "master"
+                },
+                "require": {
+                    "php": ">=5.3.0"
+                },
+                "license": [
+                    "BSD-3-Clause"
+                ],
+                "description": "Contacts Agenda - SQL Injection testing application",
+                "homepage": "https://github.com/z3ppelin/agenda",
+                "keywords": [
+                    "agenda",
+                    "sql-injection"
+                ]
+            }
+        }
+    }
+}
