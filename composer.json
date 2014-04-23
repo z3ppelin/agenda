@@ -1,0 +1,24 @@
+{
+    "name": "bogcon/agenda",
+    "description": "Contacts Agenda - SQL Injection testing application",
+    "keywords": ["agenda","sql-injection"],
+    "homepage": "https://github.com/z3ppelin/agenda",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Bogdan Constantinescu",
+            "email": "bog_con@yahoo.com",
+            "homepage": "http://bogdanconstantinescu.ro",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/z3ppelin/agenda.git"
+        }
+    ]
+}
