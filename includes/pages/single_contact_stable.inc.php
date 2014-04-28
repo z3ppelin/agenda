@@ -8,6 +8,14 @@
 ?>
 <?php if (!defined('APP_INCLUDE_ME')) die; // this file cannot be accessed directly ?>
 <?php
+$backUrl = '';
+if (false !== strpos(strtolower($_SERVER['REQUEST_URI']), 'mysql')) {
+    $backUrl = 'mysql/';
+} elseif (false !== strpos(strtolower($_SERVER['REQUEST_URI']), 'oracle')) {
+    $backUrl = 'oracle/';
+}
+?>
+<?php
 require_once 'header.inc.php';
 if (isset($contact) && !empty($contact)):
     $image = strlen($contact['img_path']) ? $contact['img_path'] : 'uploads/photo_not_available.png';
@@ -87,5 +95,5 @@ if (isset($contact) && !empty($contact)):
     Contact not found.
 <?php endif; ?>
 <br /><br /><br />
-<p class="back_link"><a href="">&lt;&lt; Go back</a></p>
+<p class="back_link"><a href="<?php echo $backUrl; ?>">&lt;&lt; Go back</a></p>
 <?php require_once 'footer.inc.php'; ?>
