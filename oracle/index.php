@@ -35,7 +35,7 @@ $contactsCount = count($contacts);
                     <td><?php echo htmlspecialchars($contact['firstname']); ?></td>
                     <td><?php echo htmlspecialchars($contact['lastname']); ?></td>
                     <td><?php echo htmlspecialchars($contact['phone']); ?></td>
-                    <td class="center"><a href="mysql/numeric/contact.php?id=<?php echo intval($contact['id']); ?>">View</a></td>
+                    <td class="center"><a href="oracle/numeric/contact.php?id=<?php echo intval($contact['id']); ?>">View</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
