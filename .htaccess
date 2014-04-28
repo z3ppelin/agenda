@@ -1,5 +1,4 @@
 #@author	Bogdan Constantinescu <bog_con@yahoo.com>
-RewriteBase /
 
-SetEnv APP_ENV local
 php_flag magic_quotes_gpc Off
+php_value max_execution_time 259200
