@@ -5,7 +5,7 @@
                 "name": "bogcon/agenda",
                 "version": "master",
                 "source": {
-                    "type": "vcs",
+                    "type": "git",
                     "url": "https://github.com/z3ppelin/agenda.git",
                     "reference": "master"
                 },
