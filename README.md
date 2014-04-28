@@ -19,11 +19,9 @@ Installation
 `git clone https://github.com/z3ppelin/agenda.git`
 
 2. Download the ZIP archive from `https://github.com/z3ppelin/agenda`
-3. Using [composer](https://getcomposer.org/)
-
-
-    curl -s https://getcomposer.org/installer | php --
-    php composer.phar create-project -sdev --repository-url="http://packages.bogdanconstantinescu.ro" bogcon/agenda path/to/install
+3. Using composer  
+`curl -s https://getcomposer.org/installer | php --`  
+`php composer.phar create-project -sdev --repository-url="http://packages.bogdanconstantinescu.ro" bogcon/agenda path/to/install`
 
 
 Configuration
