@@ -82,3 +82,14 @@ body {
     font-size:123.1%; /* 16px */
     margin: 10px 0 0 50px;
 }
+.error {
+    text-align: center;
+    border: #F00 dashed 1px;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+form.login {
+    margin: auto;
+    width: 40%;
+}
