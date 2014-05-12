@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 01, 2013 at 09:39 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: May 12, 2014 at 02:46 PM
+-- Server version: 5.5.35
+-- PHP Version: 5.3.10-1ubuntu3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `agenda`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', '123'),
+(2, 'bogdan', '123');
 
 -- --------------------------------------------------------
 
@@ -39,16 +60,23 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_contacts_regions` (`region_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `firstname`, `lastname`, `street`, `postalcode`, `city`, `region_id`, `phone`, `email`, `img_path`) VALUES
-(2, 'Steven', 'Alexandrescu', NULL, NULL, NULL, NULL, '072222222', 'adela.alexandrescu@example.com', NULL),
-(3, 'Catalin', 'Ionescu', 'Str. Basarabiei, Nr. 100', NULL, 'Targoviste', 17, '021123456789', 'catalin.ionescu@example.com', NULL),
-(4, 'Bogdan', 'Constantinescu', 'Str. Bujorului, Nr. 6, Bl. 10, Sc. A', '10000', 'Bucuresti', 10, '0728186218', 'bog_con@yahoo.com', 'uploads/bogdan.constantinescu.jpg');
+(2, 'Gerald', 'Cambrault', NULL, NULL, NULL, NULL, '0722222222', 'gerald.cambrault@agenda.dev', NULL),
+(3, 'Cătălin', 'Ionescu', 'Str. Basarabiei, Nr. 100', NULL, 'Targoviste', 17, '0728186219', 'catalin.ionescu@agenda.dev', NULL),
+(4, 'Ioana', 'Petrescu', 'Str. Bujorului, Nr. 6, Bl. 10, Sc. A', '10000', 'Bucuresti', 10, '0728186218', 'ioana.petrescu@agenda.dev', ''),
+(5, 'Costin', 'Corbu', 'Str. Test, #100', '123123', 'Alba-Iulia', 1, '0722111111111', 'costin.corbu@agenda.dev', NULL),
+(6, 'Alin', 'Dobra', NULL, '', 'Bucuresti', 10, '+ 4 0123312321312', 'alin.dobra@agenda.dev', NULL),
+(7, 'Teo', 'Willy', NULL, NULL, 'București', 10, '021321312312', NULL, NULL),
+(8, 'John', 'Doe', 'Bld. Unirii', '987', 'Ploiești', 32, '074324323443', 'john.doe@example.com', NULL),
+(9, 'Valentin', 'Cristian', 'Bld. Elisabeta, nr. 10003B', '13134', 'Bucuresti', 10, '072233333333', 'valentin.cristian@agenda.dev', NULL),
+(10, 'Andreea', 'Alexandrescu', 'Str. abcdefg', NULL, NULL, NULL, '0345123123123', NULL, NULL),
+(11, 'Stefan', 'Popescu', NULL, '100', 'Campina', 32, '0712321312312', 'stefan.popescu@example.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -107,11 +135,14 @@ INSERT INTO `regions` (`id`, `code`, `name`) VALUES
 (37, 'TR', 'Teleorman'),
 (38, 'TM', 'Timis'),
 (39, 'TL', 'Tulcea'),
-(40, 'VL', 'Valcea'),
+(40, 'VL', 'VÃ¢lcea'),
 (41, 'VS', 'Vaslui'),
 (42, 'VN', 'Vrancea');
 
--- --------------------------------------------------------
+--
+-- Constraints for dumped tables
+--
+
 --
 -- Constraints for table `contacts`
 --
