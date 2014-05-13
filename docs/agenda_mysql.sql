@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `firstname`, `lastname`, `street`, `postalcode`, `city`, `region_id`, `phone`, `email`, `img_path`) VALUES
-(2, 'Gerald', 'Cambrault', NULL, NULL, NULL, NULL, '0722222222', 'gerald.cambrault@agenda.dev', NULL),
+(2, 'Gerald', 'Cambrault', NULL, NULL, NULL, NULL, '0722222222', 'gerald.cambrault@agenda.dev', 'uploads/Mickey_Mouse.jpg'),
 (3, 'Cătălin', 'Ionescu', 'Str. Basarabiei, Nr. 100', NULL, 'Targoviste', 17, '0728186219', 'catalin.ionescu@agenda.dev', NULL),
 (4, 'Ioana', 'Petrescu', 'Str. Bujorului, Nr. 6, Bl. 10, Sc. A', '10000', 'Bucuresti', 10, '0728186218', 'ioana.petrescu@agenda.dev', ''),
 (5, 'Costin', 'Corbu', 'Str. Test, #100', '123123', 'Alba-Iulia', 1, '0722111111111', 'costin.corbu@agenda.dev', NULL),
